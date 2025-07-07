@@ -73,3 +73,6 @@ jobs:
           # The GITHUB_TOKEN is used to authenticate to the GitHub API.
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # 6. Call Portainer Webhook to update the stack
+      - name: Call Portainer Webhook
+        run: curl --insecure -X POST https://152.53.50.17:9443/api/stacks/webhooks/64ec5454-4e2e-4abe-81e3-200830e89d5f
