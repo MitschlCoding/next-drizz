@@ -4,8 +4,8 @@ import { defineConfig } from "drizzle-kit";
 config({ path: '.env' });
 
 export default defineConfig({
-  schema: "./db/schema.js",
-  out: "./migrations",
+  schema: ".src/db/schema.js",
+  out: ".src/db/migrations",
   dialect: "sqlite",
   url: process.env.DATABASE_URL,
 });
