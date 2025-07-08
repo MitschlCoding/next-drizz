@@ -3,6 +3,7 @@ import { drizzle } from 'drizzle-orm/libsql';
 
 
 config({path: '.env'});
-const db = drizzle({ connection: {
+
+export const db = drizzle({ connection: {
   url: process.env.DATABASE_URL, 
 }});
